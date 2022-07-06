@@ -5,25 +5,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>首頁</title>
+  <title>OAnime Demo</title>
   <link rel="stylesheet" href="./assets/style/all.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
   <header class="header">
-    這是 header
+    <a href="#" class="logo">O ANIME</a>
+	
+    <div class="icons">
+      <i class='bx bx-search' id="search-btn"></i>
+      <div class='bx bxs-user' id="user-btn" >
+        <ul class="user-menu" id="user-menu">
+          <li><a href="#">會員管理</a></li>
+          <li><a href="#">所有動畫</a></li>
+          <li><a href="#">觀看紀錄</a></li>
+          <li><a href="#">我的最愛</a></li>
+          <li><a href="#">問題回報</a></li>
+          <li><a href="#" id="logout">登出</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="search-form">
+      <form action="" method="post">
+        <input type="text" name="videoName">
+        <button type="submit">
+          <i class='bx bx-search' id="search-btn"></i>
+        </button>
+      </form>
+    </div>
   </header>
 
-  
-<h1>
-  這是一段話
-</h1>
+  <div class="login-container" id="login-container">
+    <form action="" class="login-form">
+      <i class='bx bx-x' id="close-btn"></i>
+      <h2>登入</h2>
+      <input type="text" placeholder="請輸入帳號" class="input"/>
+      <p class="login-errorMessage"></p>
+      <input type="password" placeholder="請輸入密碼" class="input"/>
+      <p class="login-errorMessage"></p>
+      <!-- <input type="submit" value="登入" class="login-btn"> -->
+      <a href="" class="login-btn">登入</a>
+      <a href="#">忘記密碼？</a>
+      <a href="#">註冊</a>
+    <form>
+  </div>
 
-<div class="box"></div>
+
+
+
+
+  
+<!-- banner section -->
+<div class="banner">
+	<img src="assets/images/banner.jpg" alt="banner picture">
+	<div class="content">
+		<span>最精彩的動畫<br>最優惠的好禮<br>盡在</span>
+		<h1>O Anime</h1>
+		<a href="#subscribe">訂閱</a>
+	</div>
+</div>
+<!-- banner section -->
+
+
+<!-- intro section -->
+<section class="intro">
+	<img src="assets/images/watch anime everywhere.jpg" alt="intro - pic">
+	<div class="content">
+		<h2>隨時隨地 精彩每一刻</h2>
+		<p>不管在任何地方<br>
+		   不管是任何時刻<br>
+		   都能夠輕鬆享受精彩的動漫</p>
+	</div>
+</section>
+<!-- intro section -->
+
+
+
+<!-- multiple platform section -->
+<section class="platform">
+	<div class="content">
+		<h2>支援各種平台</h2>
+		<p>享受沒有任何限制快感 不管是坐著看 躺著看 趴著看<br>
+		   都能一次滿足你的願望</p>
+	</div>
+	<div class="pic">
+		<img src="assets/images/computer2.png" alt="computer" class="computer">
+		<img src="assets/images/notebook3.png" alt="notebook" class="notebook">
+		<img src="assets/images/pad3.png" alt="pad" class="pad">
+		<img src="assets/images/phone2.png" alt="phone" class="phone">
+	</div>
+</section>
+<!-- multiple platform section -->
+
+
+
+<!-- subscribe section -->
+<section class="subscribe" id="subscribe">
+	<div class="card">
+		<img src="assets/images/訂閱1.jpg" alt="標準月費">
+		<div class="content">
+			<h2>標準月費</h2>
+			<span>NT$200 / 月</span>
+			<a href="#subscribe" id="subscribe-month">訂閱</a>
+		</div>
+	</div>
+	<div class="card">
+		<img src="assets/images/訂閱2.jpg" alt="超值年費">
+		<div class="content">
+			<h2>超值年費</h2>
+			<span>NT$2200 / 年</span>
+			<a href="#subscribe" id="subscribe-year">訂閱</a>
+		</div>
+	</div>
+</section>
+<!-- subscribe section -->
+
+
+
+
 
   <footer class="footer">
-    footer
+    <div class="icon">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+      <a href="#"><i class='bx bxl-twitter' ></i></a>
+      <a href="#"><i class='bx bxl-github' ></i></a>
+      <a href="#"><i class='bx bxl-youtube'></i></a>
+    </div>
+    <div class="copyright">
+      <p>&copy; Copyright @2022 By <span>O Anime</span> | All Rights Reserved</p>
+      <p>此作品為前端作品 並無作為商業利益所用</p>
+    </div>
   </footer>
+
+
+
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
 </body>
