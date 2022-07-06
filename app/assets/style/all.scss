@@ -117,6 +117,9 @@ body{
           &:last-child{
             border-bottom: none;
           }
+          &:hover{
+            background: rgba(0, 0, 0, 0.3);
+          }
           a{
             color: #fff;
             text-decoration: none;

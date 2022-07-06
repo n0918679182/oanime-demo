@@ -7,38 +7,39 @@ searchBtn.addEventListener('click', ()=>{
     userMenu.classList.remove('active');
 });
 
-
 // header 點擊下拉選單 或 點擊登入
-let userBtn = document.querySelector('#user-btn');
-let userMenu = document.querySelector('.user-menu');
-let havelogin = "true";
-let loginClose = document.querySelector('#close-btn');
-let logout = document.querySelector('#logout');
-let login = document.querySelector('.login-btn');
+var userBtn = document.querySelector('#user-btn');
+var userMenu = document.querySelector('.user-menu');
+var havelogin = "true";
+var loginClose = document.querySelector('#close-btn');
+var logout = document.querySelector('#logout');
+var login = document.querySelector('.login-btn');
 
-login.addEventListener('click',()=>{
-    havelogin = "true";
+
+
+userBtn.addEventListener('click', function () {
+  searchBtn.classList.remove('bx-x');
+  searchForm.classList.remove('active');
+
+  if (havelogin == "true") {
+    userMenu.classList.toggle('active');
+  } else if(havelogin == "false"){
+    document.getElementById("user-menu").style.display = "none";
+    document.getElementById("login-container").style.top = 0;
+  }
 });
 
-userBtn.addEventListener('click', ()=>{
-    alert(havelogin)
-    searchBtn.classList.remove('bx-x');
-    searchForm.classList.remove('active');
-    if( havelogin == "true" ){
-        userMenu.classList.add('active');
-    }else{
-        document.getElementById("user-menu").style.display="none";
-        document.getElementById("login-container").style.top=0;
-    }
+login.addEventListener('click', function () {
+  havelogin = "true";
 });
 
-logout.addEventListener('click',()=>{
-    havelogin = "false";
+logout.addEventListener('click', function () {
+  havelogin = "false";
 });
 
-loginClose.addEventListener('click',()=>{
-    document.getElementById("login-container").style.top="-120%";
-});
+loginClose.addEventListener('click', function () {
+  document.getElementById("login-container").style.top = "-120%";
+}); 
 
 
 
