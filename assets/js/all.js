@@ -15,20 +15,19 @@ var havelogin = "true";
 var loginClose = document.querySelector('#close-btn');
 var logout = document.querySelector('#logout');
 var login = document.querySelector('.login-btn');
-login.addEventListener('click', function () {
-  havelogin = "true";
-});
 userBtn.addEventListener('click', function () {
-  alert(havelogin);
   searchBtn.classList.remove('bx-x');
   searchForm.classList.remove('active');
 
   if (havelogin == "true") {
-    userMenu.classList.add('active');
-  } else {
+    userMenu.classList.toggle('active');
+  } else if (havelogin == "false") {
     document.getElementById("user-menu").style.display = "none";
     document.getElementById("login-container").style.top = 0;
   }
+});
+login.addEventListener('click', function () {
+  havelogin = "true";
 });
 logout.addEventListener('click', function () {
   havelogin = "false";
